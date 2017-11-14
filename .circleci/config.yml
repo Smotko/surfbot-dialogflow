@@ -25,5 +25,14 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
+      # Run tests!
       - run: npm test
+
+      # Deploy!
+      - deploy:
+          name: Deploy
+          working_directory: ~/surfer-dude/firebase
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              functions/node_modules/.bin/firebase deploy --only functions --token $FIREBASE_TOKEN --project $FIREBASE_PROJECT
+            fi
