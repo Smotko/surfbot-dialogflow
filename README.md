@@ -1,4 +1,5 @@
 # Surfer Dude - A friendly bot with local surf spot knowladge
+[![CircleCI](https://circleci.com/gh/Smotko/surfer-dude.svg?style=svg)](https://circleci.com/gh/Smotko/surfer-dude)
 
 ## Deployment Instructions
 
