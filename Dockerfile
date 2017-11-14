@@ -3,7 +3,7 @@ FROM node:6.11.5
 
 WORKDIR /usr/src/app
 
-RUN npm install firebase-tools -g
+RUN npm install ava firebase-tools -g
 
 # We need to install dependencies in the firebase/functions directory
 # as they get deployed along with our function

@@ -8,6 +8,13 @@ services:
     volumes:
      - .:/usr/src/app
      - /usr/src/app/firebase/functions/node_modules
+  test:
+    build: .
+    working_dir: /usr/src/app/firebase/functions
+    command: npm test -- --watch
+    volumes:
+     - .:/usr/src/app
+     - /usr/src/app/firebase/functions/node_modules
   token:
     build: .
     command: firebase login:ci

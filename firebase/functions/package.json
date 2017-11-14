@@ -9,13 +9,15 @@
     "node": "~6.0"
   },
   "scripts": {
-    "start": "firebase serve --token $FIREBASE_TOKEN --only functions:dialogflowFirebaseFulfillment",
-    "deploy": "firebase deploy --token $FIREBASE_TOKEN --project surf-bot --only functions"
+    "test": "ava"
   },
   "dependencies": {
     "actions-on-google": "^1.5.1",
     "firebase-admin": "^5.5.0",
     "firebase-functions": "^0.7.3",
     "apiai": "^4.0.3"
-  }
+  },
+  "devDependencies": {
+		"ava": "^0.20.0"
+	}
 }

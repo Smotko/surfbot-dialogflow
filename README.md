@@ -9,3 +9,10 @@ $ cp docker-compose.override.yml{.example,}
 $ vim docker-compose.override.yml # Add env variables
 $ docker-compose up deploy
 ```
+
+## Running tests
+
+```bash
+# Run tests in watch mode
+$ docker-compose up test
+```
