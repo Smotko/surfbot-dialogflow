@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  deploy:
+    build: .
+    ports:
+     - 9005:9005
+     - 5000:5000
+    volumes:
+     - .:/usr/src/app
+     - /usr/src/app/firebase/functions/node_modules
+  token:
+    build: .
+    command: firebase login:ci
+    volumes:
+     - .:/usr/src/app
+     - /usr/src/app/firebase/functions/node_modules
